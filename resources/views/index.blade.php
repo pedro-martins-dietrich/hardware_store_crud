@@ -1,4 +1,4 @@
-@extends('templates.header')
+@extends('templates.template')
 
 @section('title')
 <title>Hardware Store CRUD</title>
