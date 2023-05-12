@@ -14,5 +14,9 @@
             <hr>
         </div>
         @yield('content')
+        <div>
+            <hr>
+            <p class="text-center">End of the page.</p>
+        </div>
     </body>
 </html>

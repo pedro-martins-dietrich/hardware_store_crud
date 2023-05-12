@@ -10,4 +10,9 @@ class Hardware extends Model
     use HasFactory;
 
     protected $table = 'hardware';
+
+    public function relUsers()
+    {
+        return $this->hasOne('App\Models\User', 'id', 'seller_id');
+    }
 }
