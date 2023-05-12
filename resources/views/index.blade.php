@@ -6,6 +6,5 @@
 
 @section('content')
 <div>
-    <h5>Content</h5>
 </div>
 @endsection
