@@ -11,7 +11,7 @@ class Hardware extends Model
 
     protected $table = 'hardware';
 
-    public function relUsers()
+    public function relatedUser()
     {
         return $this->hasOne('App\Models\User', 'id', 'seller_id');
     }

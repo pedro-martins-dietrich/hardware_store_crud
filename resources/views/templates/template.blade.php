@@ -12,9 +12,10 @@
                 <h1 class="text-center"><b>HARDWARE STORE CRUD</b></h1>
             </a>
             <hr>
+            <br>
         </div>
         @yield('content')
-        <div>
+        <div class="fixed-bottom">
             <hr>
             <p class="text-center">End of the page.</p>
         </div>

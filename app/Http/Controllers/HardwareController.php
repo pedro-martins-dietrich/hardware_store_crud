@@ -20,7 +20,7 @@ class HardwareController extends Controller
     // Display a listing of the resource.
     public function index()
     {
-        $hardwares = $this->objHardware->paginate(30);
+        $hardwares = $this->objHardware->paginate(30)->sortByDesc('id');
         return view('index', compact('hardwares'));
     }
 
