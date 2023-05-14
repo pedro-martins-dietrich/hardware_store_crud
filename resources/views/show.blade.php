@@ -6,7 +6,7 @@
 
 @section('content')
 <div>
-    <a href="{{url('/')}}" class="btn btn-light ms-5 mt-4 p-3">Retornar à página principal</a>
+    <a href="{{url('/hardware')}}" class="btn btn-light ms-5 mt-4 p-3">Retornar</a>
 </div>
 <div class="bg-dark-subtle text-dark-emphasis border border-dark-subtle rounded-3 p-4 mt-5 ms-5 me-5">
     @php

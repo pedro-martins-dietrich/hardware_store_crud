@@ -5,12 +5,16 @@
 @endsection
 
 @section('content')
-<div class="row g-5 ms-4 me-4">
+<div>
+    <a class="btn btn-success ms-5 mb-5" href="{{url('/hardware/create')}}">Anunciar hardware</a>
+    <br>
+</div>
+<div class="row g-4 mb-4 ms-4 me-4 justify-content-center">
     @foreach($hardwares as $hardware)
-        <div class="card text-center bg-dark-subtle border border-dark-subtle rounded-3 mt-5 ms-5 me-5" style="width: 20rem" style="height: 20rem">
+        <div class="card text-center bg-dark-subtle border border-dark-subtle rounded-3 mt-4 mb-4 ms-4 me-4" style="width: 27rem">
             <h2 class="text-light mt-4">{{$hardware->name}}</h2>
             <p class="mt-4">{{$hardware->description}}</p>
-            <a href="{{url("/hardwares/$hardware->id")}}" class="btn btn-outline-light btn-lg m-5 stretched-link">
+            <a class="btn btn-outline-light btn-lg m-5 stretched-link" href="{{url("/hardware/$hardware->id")}}">
                 R$ {{$hardware->price}}
             </a>
         </div>

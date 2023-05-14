@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('brand');
             $table->string('type');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->double('price', total: 10, places: 2);
             $table->integer('quantity');
             $table->boolean('used');
