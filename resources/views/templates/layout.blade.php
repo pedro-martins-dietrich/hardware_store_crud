@@ -7,16 +7,17 @@
         @yield('title')
     </head>
     <body>
-        <div>
+        <div class="mt-2">
             <a href="{{url('/')}}">
                 <h1 class="text-center"><b>HARDWARE STORE CRUD</b></h1>
             </a>
             <hr>
+            <br>
         </div>
         @yield('content')
-        <div>
-            <hr>
-            <p class="text-center">End of the page.</p>
+        <div class="fixed-bottom text-center bg-dark-subtle p-3">
+            <a class="mb-4 p-4" href="https://github.com/pedro-martins-dietrich/hardware_store_crud">GitHub repository of this site</a>
         </div>
+        <script src="{{url("assets/js/javascript.js")}}"></script>
     </body>
 </html>

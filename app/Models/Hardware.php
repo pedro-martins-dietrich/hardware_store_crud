@@ -11,7 +11,18 @@ class Hardware extends Model
 
     protected $table = 'hardware';
 
-    public function relUsers()
+    protected $fillable = [
+        'name',
+        'seller_id',
+        'brand',
+        'type',
+        'description',
+        'price',
+        'quantity',
+        'used'
+    ];
+
+    public function seller()
     {
         return $this->hasOne('App\Models\User', 'id', 'seller_id');
     }
