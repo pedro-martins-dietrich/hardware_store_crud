@@ -22,7 +22,7 @@ class Hardware extends Model
         'used'
     ];
 
-    public function relatedUser()
+    public function seller()
     {
         return $this->hasOne('App\Models\User', 'id', 'seller_id');
     }

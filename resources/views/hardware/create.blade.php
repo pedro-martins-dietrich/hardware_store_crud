@@ -1,4 +1,4 @@
-@extends('templates.template')
+@extends('templates.layout')
 
 @section('title')
     @if(isset($hardware))
@@ -61,7 +61,7 @@
             <div class="col-md-6 mb-4">
                 <label class="form-label" for="hardwareSellerID">Vendedor</label>
                 <select class="form-control" name="seller_id" id="hardwareSellerID" required>
-                    <option value="{{$hardware->relatedUser->id ?? ''}}">{{$hardware->relatedUser->name ?? "Selecione"}}</option>
+                    <option value="{{$hardware->seller->id ?? ''}}">{{$hardware->seller->name ?? "Selecione"}}</option>
                     @foreach($users as $user)
                         <option class="text-light" value="{{$user->id}}">{{$user->name}}</option>
                     @endforeach

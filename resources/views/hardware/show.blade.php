@@ -1,19 +1,23 @@
-@extends('templates.template')
+@extends('templates.layout')
 
 @section('title')
 <title>Hardware Store - {{$hardware->name}}</title>
 @endsection
 
 @section('content')
-<div>
-    <a href="{{url('/hardware')}}" class="btn btn-light ms-5 mt-4 p-3">Retornar</a>
+<div class="d-flex justify-content-between">
+    <a class="btn btn-light ms-5 mt-4 p-3" style="width: 16rem" href="{{url('/hardware')}}">Retornar</a>
+    <a class="btn btn-warning me-5 mt-4 p-3" style="width: 16rem" href="{{url("/hardware/$hardware->id/edit")}}">Editar</a>
+    <a class="btn btn-danger me-5 mt-4 p-3" style="width: 16rem" href="{{url("/hardware/$hardware->id")}}">Deletar</a>
 </div>
+
 <div class="bg-dark-subtle text-dark-emphasis border border-dark-subtle rounded-3 p-4 mt-5 ms-5 me-5">
     @php
-        $user = $hardware->relatedUser;
+        $user = $hardware->seller;
     @endphp
 
     <h1 class="text-center"><strong>{{$hardware->name}}</strong></h1>
+    <hr>
     <br>
 
     <div class="row g-3">
