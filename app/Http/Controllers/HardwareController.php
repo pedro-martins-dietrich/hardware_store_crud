@@ -87,6 +87,10 @@ class HardwareController extends Controller
     public function destroy(string $id)
     {
         $del = $this->objHardware->destroy($id);
-        return (($del) ? "Sim" : "Não");
+        if($del)
+        {
+            redirect("/hardware");
+        }
+        return;
     }
 }

@@ -6,9 +6,10 @@
 
 @section('content')
 <div class="d-flex justify-content-between">
+    @csrf
     <a class="btn btn-light ms-5 mt-4 p-3" style="width: 16rem" href="{{url('/hardware')}}">Retornar</a>
     <a class="btn btn-warning me-5 mt-4 p-3" style="width: 16rem" href="{{url("/hardware/$hardware->id/edit")}}">Editar</a>
-    <a class="btn btn-danger me-5 mt-4 p-3" style="width: 16rem" href="{{url("/hardware/$hardware->id")}}">Deletar</a>
+    <a class="btn btn-danger me-5 mt-4 p-3 js-delete" style="width: 16rem" href="{{url('/hardware')}}">Deletar</a>
 </div>
 
 <div class="bg-dark-subtle text-dark-emphasis border border-dark-subtle rounded-3 p-4 mt-5 ms-5 me-5">

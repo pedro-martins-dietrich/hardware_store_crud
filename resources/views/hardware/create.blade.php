@@ -24,7 +24,7 @@
         @endforeach
     </div>
 @endif
-<div class="p-4 text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3 ms-5 me-5">
+<div class="text-dark-emphasis bg-dark-subtle border border-dark-subtle rounded-3 col-8 offset-2 p-4">
     @if(isset($hardware))
         <form name="editHardware" id="editHardwareForm" method="post" action="{{url("/hardware/$hardware->id")}}">
             @method('PUT')
