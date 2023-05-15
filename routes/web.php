@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,6 @@ Route::get('/hardware/{hardware}/edit', [HardwareController::class, 'edit'])->wh
 Route::get('/hardware/{hardware}', [HardwareController::class, 'show'])->where('hardware', '[0-9]+');
 Route::put('/hardware/{hardware}', [HardwareController::class, 'update'])->where('hardware', '[0-9]+');
 Route::delete('/hardware/{hardware}', [HardwareController::class, 'destroy'])->where('hardware', '[0-9]+');
+
+Route::get('/user/create', [UserController::class, 'create']);
+Route::get('/user/login', [UserController::class, 'login']);
