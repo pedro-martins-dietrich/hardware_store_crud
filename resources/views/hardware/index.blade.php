@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-<div class="mb-1">
-    <a class="btn btn-success ms-5 mb-5 p-3" href="{{url('/hardware/create')}}">Anunciar hardware</a>
+<div class="ms-5 mb-1 p-2">
+    <a class="btn btn-success ms-5 mb-5 p-3" style="height: 3.7rem; width: 15rem" href="{{url('/hardware/create')}}"><h5>Anunciar hardware</h5></a>
 </div>
 <div class="row g-4 mb-4 ms-4 me-4 justify-content-center">
     @foreach($hardwares as $hardware)

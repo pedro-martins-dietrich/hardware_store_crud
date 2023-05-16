@@ -26,3 +26,5 @@ Route::delete('/hardware/{hardware}', [HardwareController::class, 'destroy'])->w
 
 Route::get('/user/create', [UserController::class, 'create']);
 Route::get('/user/login', [UserController::class, 'login']);
+Route::post('/user', [UserController::class, 'store']);
+Route::get('/user/{user}', [UserController::class, 'show'])->where('user', '[0-9]+');
