@@ -14,6 +14,11 @@ class UserController extends Controller
         $this->objUser = new User();
     }
 
+    public function index()
+    {
+        return redirect("/");
+    }
+
     public function create()
     {
         $users = $this->objUser->all();

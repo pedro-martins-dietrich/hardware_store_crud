@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\UserController;
 
@@ -26,5 +27,10 @@ Route::delete('/hardware/{hardware}', [HardwareController::class, 'destroy'])->w
 
 Route::get('/user/create', [UserController::class, 'create']);
 Route::get('/user/login', [UserController::class, 'login']);
+Route::get('/user', [UserController::class, 'index']);
 Route::post('/user', [UserController::class, 'store']);
 Route::get('/user/{user}', [UserController::class, 'show'])->where('user', '[0-9]+');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();

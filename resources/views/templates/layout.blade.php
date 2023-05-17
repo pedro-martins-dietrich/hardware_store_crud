@@ -12,12 +12,22 @@
             <a class="ms-5 me-auto" href="{{url('/')}}">
                 <h1 class="text-center"><b>HARDWARE STORE CRUD</b></h1>
             </a>
-            <a class="btn btn-primary me-5 p-3" style="height: 3.7rem; width: 15rem" href="{{url('/user/create')}}">
-                <h5 class="text-center">Realizar cadastro</h5>
-            </a>
-            <a class="btn btn-primary me-5 p-3" style="height: 3.7rem; width: 15rem" href="{{url('/user/login')}}">
-                <h5 class="text-center">Fazer login</h5>
-            </a>
+            @if(session('status'))
+                <a class="btn btn-primary me-5 p-3" style="height: 3.7rem; width: 15rem" href="{{url('/register')}}">
+                    <h5 class="text-center">Realizar cadastro</h5>
+                </a>
+                <a class="btn btn-primary me-5 p-3" style="height: 3.7rem; width: 15rem" href="{{url('/login')}}">
+                    <h5 class="text-center">Fazer login</h5>
+                </a>
+            @else
+                <a href="{{url('/user')}}">
+                    <h5>Visualizar conta</h5>
+                </a>
+                <form id="logoutButton" action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button class="btn btn-danger p-2 ms-5" style="width: 20rem" type="submit">Log out</button>
+                </form>
+            @endif
         </div>
         <div class="bg-primary p-1 mb-5"></div>
         @yield('content')
